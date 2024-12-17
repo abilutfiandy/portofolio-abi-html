@@ -1,0 +1,69 @@
+
+section {
+    padding-top: 3rem;
+}
+
+.jumbotron {
+    padding-top: 6rem;
+}
+.btn-custom-button {
+    background-color:  #778899;
+    border-color: #FAFA33;
+    color: white;
+    box-shadow: 0 4px 6px #c7c7c7;
+    border-radius: 2em;
+}
+.btn-custom-button:hover {
+    background-color: #8FBC8F;
+    border-color: #cc8e35;
+    transform: scale(1.05);
+    /* Efek membesar sedikit */
+    box-shadow: 0 6px 8px #585757;
+    color: black;
+}
+.jumbotron img{
+    background-color:  #778899;
+    box-shadow: 0 4px 6px #c7c7c7;
+}
+.card{
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+
+}
+.card p{
+    color:#6aa46a ;
+}
+
+@media(max-width:768px){
+    .jumbotron{
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+    }
+    .jumbotron img{
+        margin-bottom: 1rem;
+    }
+    .btn-warning{
+     display: flex;
+     flex-direction: column;
+     margin-top: 1rem;
+    }
+
+    .btn-custom-button{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
