@@ -1,69 +1,164 @@
-
 section {
-    padding-top: 3rem;
+  padding-top: 3rem;
 }
 
 .jumbotron {
-    padding-top: 6rem;
+  padding-top: 3rem;
 }
 .btn-custom-button {
-    background-color:  #778899;
-    border-color: #FAFA33;
-    color: white;
-    box-shadow: 0 4px 6px #c7c7c7;
-    border-radius: 2em;
+  background-color: #778899;
+  border-color: #fafa33;
+  color: white;
+  box-shadow: 0 4px 6px #c7c7c7;
+  border-radius: 2em;
 }
 .btn-custom-button:hover {
-    background-color: #8FBC8F;
-    border-color: #cc8e35;
-    transform: scale(1.05);
-    /* Efek membesar sedikit */
-    box-shadow: 0 6px 8px #585757;
-    color: black;
-}
-.jumbotron img{
-    background-color:  #778899;
-    box-shadow: 0 4px 6px #c7c7c7;
-}
-.card{
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    margin: 1rem 0;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-
-}
-.card p{
-    color:#6aa46a ;
+  background-color: #8fbc8f;
+  border-color: #cc8e35;
+  transform: scale(1.05);
+  /* Efek membesar sedikit */
+  box-shadow: 0 6px 8px #585757;
+  color: black;
 }
 
-@media(max-width:768px){
-    .jumbotron{
-        display: flex;
-        flex-direction: column;
-
-        text-align: center;
-    }
-    .jumbotron img{
-        margin-bottom: 1rem;
-    }
-    .btn-warning{
-     display: flex;
-     flex-direction: column;
-     margin-top: 1rem;
-    }
-
-    .btn-custom-button{
-        display: flex;
-        flex-direction: column;
-        margin-top: 1rem;
-        flex-wrap: wrap;
-    }
+.btn-edit {
+  background-color: #a0522d;
+  border-color: #878787;
 }
 
+.btn-edit:hover {
+  background-color: #778899;
+  border-color: #878787;
+}
+
+.btn-dark {
+  align-items: center;
+  background-color: black;
+}
+.btn-dark:hover {
+  align-items: center;
+  background-color: black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+.btn-light {
+  align-items: center;
+  border-color: #aeaeae;
+  color: red;
+}
+.btn-light:hover {
+  align-items: center;
+  border-color: #aeaeae;
+  color: red;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+.btn-custom {
+  align-items: center;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+.btn-custom:hover {
+  align-items: center;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+.jumbotron img {
+  background-color: #778899;
+  box-shadow: 0 4px 6px #c7c7c7;
+}
+.card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card p {
+  color: #6aa46a;
+}
+
+.typing-effect {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  color: #6aa46a;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 300px;
+  animation: typing 4s steps(40, end) forwards;
+  border: none; /* Hilangkan semua border */
+  border-right: none !important; /* Pastikan border cursor dihilangkan */
+  caret-color: transparent !important; /* Hilangkan kursor jika muncul */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .typing-effect {
+    font-size: 14px !important; /* Ukuran font lebih kecil */
+    width: 100%; /* Lebar penuh di layar kecil */
+    text-align: center; /* Posisi teks berada di tengah */
+    border: none; /* Hilangkan semua border di mobile */
+    border-right: none;
+    caret-color: transparent; /* Hilangkan kursor */
+    animation: typing 4s steps(40, end) forwards; /* Tanpa blink-caret */
+  }
+}
+
+@media (max-width: 768px) {
+  .jumbotron {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+  }
+  .jumbotron img {
+    margin-bottom: 1rem;
+  }
+  .btn-edit {
+    background-color: #a0522d;
+    border-color: #878787;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .btn-custom-button {
+    display: flex;
+    background-color: #6aa46a;
+    flex-direction: column;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  .btn-dark {
+    align-items: center;
+  }
+  .btn-secondary {
+    align-items: center;
+  }
+  .btn-custom {
+    align-items: center;
+    background-color: blue;
+    color: white;
+    text-align: center;
+  }
+}
