@@ -1,3 +1,14 @@
+body,
+html {
+  overflow-x: hidden; /* Menyembunyikan scroll horizontal */
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
 section {
   padding-top: 3rem;
 }
@@ -5,15 +16,35 @@ section {
 .jumbotron {
   padding-top: 3rem;
 }
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+h4 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+h5 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+h6 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
 .btn-custom-button {
-  background-color: #778899;
-  border-color: #fafa33;
+  background-color: #ffff00;
+  border-color: white;
   color: white;
   box-shadow: 0 4px 6px #c7c7c7;
   border-radius: 2em;
 }
+
 .btn-custom-button:hover {
-  background-color: #8fbc8f;
+  background-color: #f0e68c;
   border-color: #cc8e35;
   transform: scale(1.05);
   /* Efek membesar sedikit */
@@ -22,12 +53,13 @@ section {
 }
 
 .btn-edit {
-  background-color: #a0522d;
+  background-color: #1e90ff;
   border-color: #878787;
+  color: white;
 }
 
 .btn-edit:hover {
-  background-color: #778899;
+  background-color: #90ee90;
   border-color: #878787;
 }
 
@@ -68,41 +100,54 @@ section {
   transform: scale(1.05);
 }
 .jumbotron img {
-  background-color: #778899;
-  box-shadow: 0 4px 6px #c7c7c7;
+  border-radius: 50%/20%;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.2);
+  object-fit: cover;
 }
 .card {
   background-color: #f8f9fa;
   border: 1px solid #ddd;
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
   margin: 1rem 0;
+  box-sizing: border-box;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .card:hover {
   transform: translateY(-5px);
+  box-sizing: border-box;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.card p {
-  color: #6aa46a;
+  max-width: 100%;
+  height: auto;
 }
 
 .typing-effect {
   text-align: left;
-  font-size: 14px;
+  font-size: 18px !important;
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
-  color: #6aa46a;
+  color: #ffd700;
   white-space: nowrap;
   overflow: hidden;
-  width: 300px;
+  width: 300px; /* Sesuaikan dengan panjang maksimum teks */
+  min-height: 1.5em; /* Pastikan tinggi tetap */
   animation: typing 4s steps(40, end) forwards;
   border: none; /* Hilangkan semua border */
   border-right: none !important; /* Pastikan border cursor dihilangkan */
   caret-color: transparent !important; /* Hilangkan kursor jika muncul */
 }
 
+.footer {
+  font-size: 14px;
+}
+.footer a {
+  text-decoration: none;
+  color: #1e90ff;
+  font-weight: bold;
+}
 @keyframes typing {
   from {
     width: 0;
@@ -128,27 +173,35 @@ section {
   .jumbotron {
     display: flex;
     flex-direction: column;
-
     text-align: center;
   }
   .jumbotron img {
     margin-bottom: 1rem;
+    width: 180px;
+  }
+  .jumbotron .name {
+    font-size: 18px !important;
   }
   .btn-edit {
-    background-color: #a0522d;
-    border-color: #878787;
     display: flex;
-    flex-direction: column;
+    background-color: #1e90ff;
+    border-color: #878787;
+    color: white;
+    justify-content: center;
+    flex-direction: none;
     margin-top: 1rem;
   }
 
   .btn-custom-button {
     display: flex;
-    background-color: #6aa46a;
-    flex-direction: column;
+    background-color: #ffff00;
+    flex-direction: none;
+    color: white;
+    justify-content: center;
     margin-top: 1rem;
     flex-wrap: wrap;
   }
+
   .btn-dark {
     align-items: center;
   }
@@ -160,5 +213,13 @@ section {
     background-color: blue;
     color: white;
     text-align: center;
+  }
+
+  .card {
+    max-width: 100%;
+    height: auto;
+  }
+  .card p {
+    font-size: 14px;
   }
 }

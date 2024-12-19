@@ -40,7 +40,7 @@
           style="
             font-size: 18px;
             font-weight: bold;
-            color: #a0522d;
+            color: #1e90ff;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
           "
           >Abi Lutfiandy Hendri</a
@@ -59,9 +59,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home"
-                >Home</a
-              >
+              <a class="nav-link" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About Me</a>
@@ -93,11 +91,6 @@
                 alt="Gambar"
                 width="300"
                 class="img-thumbnail"
-                style="
-                  object-fit: cover;
-                  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.2);
-                  border-radius: 50%/10%;
-                "
               />
             </div>
 
@@ -108,16 +101,18 @@
               data-aos-mirror="true"
             >
               <span
+                class="name"
                 style="
                   text-decoration: underline;
                   text-underline-offset: 8px;
                   font-size: 22px;
                   font-weight: bold;
-                  color: #a0522d;
+
                   display: block;
                 "
                 >Abi Lutfiandy Hendri, A.Md.Kom
               </span>
+
               <span
                 id="typingText"
                 class="typing-effect"
@@ -125,7 +120,6 @@
                   display: inline-block;
                   margin-left: 10px;
                   font-size: 22px;
-                  color: #28a745;
                   white-space: nowrap;
                   overflow: hidden;
                   border-right: 2px solid #28a745;
@@ -144,14 +138,20 @@
                 class="btn btn-edit"
                 style="border-radius: 2em"
               >
-                <font style="color: white">Contact Me</font>
+                Contact Me
+                <i
+                  class="bi bi-telephone-outbound-fill"
+                  style="margin-left: 5px"
+                ></i>
               </a>
               <a
                 href="cv/cv-abi.pdf"
                 target="_blank"
                 class="btn btn-custom-button"
-                >Download CV</a
               >
+                Download CV
+                <i class="bi bi-cloud-download" style="margin-left: 5px"></i>
+              </a>
 
               <div class="col mt-5">
                 <a
@@ -210,7 +210,7 @@
             data-aos-delay="50"
           >
             <div class="card">
-              <h4 style="text-align: center; color: #a0522d">
+              <h4 style="text-align: center; color: #1e90ff; font-size: 30px">
                 Self Introduction
               </h4>
               <div class="card-body">
@@ -233,7 +233,7 @@
             data-aos-mirror="true"
           >
             <div class="card text-center">
-              <h4 style="color: #a0522d">My Skills</h4>
+              <h4 style="color: #1e90ff; font-size: 30px">My Skills</h4>
               <div class="card-body">
                 <p class="card-text">HTML</p>
                 <p class="card-text">CSS</p>
@@ -249,18 +249,63 @@
     </section>
 
     <!-- End About Me -->
+
     <!-- Project -->
+    <!-- modal untuk lihat gambar -->
+    <div
+      class="modal fade"
+      id="imageModal"
+      tabindex="-1"
+      aria-labelledby="imageModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal title" id="imageModalLabel">My Project</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img src="" alt="Image Preview" class="img-fluid" id="modalImage" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
     <section id="project">
       <div class="container">
         <div class="row text-center mb-4 p-3">
-          <div class="col">
-            <h2>My Project</h2>
+          <div
+            class="col"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            data-aos-mirror="true"
+          >
+            <h2>Project</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 mb-4">
+          <!-- Card 1 -->
+          <div
+            class="col-md-4 mb-4"
+            data-aos="flip-left"
+            data-aos-delay="200"
+            data-aos-mirror="true"
+            data-aos-duration="3000"
+          >
             <div class="card">
-              <img src="img/c1.jpg" class="card-img-top" alt="kamera" />
+              <img
+                src="img/Silapor.png"
+                class="card-img-top"
+                alt="Gambar"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+              />
               <div class="card-body">
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
@@ -270,9 +315,23 @@
             </div>
           </div>
 
-          <div class="col-md-4 mb-4">
+          <!-- Card 2 -->
+          <div
+            class="col-md-4 mb-4"
+            class="col-md-4 mb-4"
+            data-aos="flip-left"
+            data-aos-delay="200"
+            data-aos-mirror="true"
+            data-aos-duration="3000"
+          >
             <div class="card">
-              <img src="img/c2.jpg" class="card-img-top" alt="kamera" />
+              <img
+                src="img/crud.png"
+                class="card-img-top"
+                alt="kamera"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+              />
               <div class="card-body">
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
@@ -281,9 +340,24 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
+
+          <!-- Card 3 -->
+          <div
+            class="col-md-4 mb-4"
+            class="col-md-4 mb-4"
+            data-aos="flip-left"
+            data-aos-delay="200"
+            data-aos-mirror="true"
+            data-aos-duration="3000"
+          >
             <div class="card">
-              <img src="img/c3.jpg" class="card-img-top" alt="kamera" />
+              <img
+                src="img/crud2.png"
+                class="card-img-top"
+                alt="kamera"
+                data-bs-toggle="modal"
+                data-bs-target="#imageModal"
+              />
               <div class="card-body">
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
@@ -296,41 +370,78 @@
       </div>
     </section>
     <!-- End Project -->
+
     <!-- Contact -->
     <section id="contact">
       <div class="container">
         <div class="row text-center mb-3">
-          <div class="col">
+          <div
+            class="col"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            data-aos-mirror="true"
+          >
             <h2>Contact Me</h2>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-8">
-            <form action="">
-              <div class="mb-3">
-                <label for="name" class="form-label"> Full Name</label>
+          <div class="col-md-6">
+            <div class="card text-center" style="background-color: #1e90ff">
+              <div class="card-body">
+                <h2 class="card-text" style="color: white">
+                  Find Me
+                  <i class="bi bi-person-check-fill" style="color: khaki"></i>
+                </h2>
+                <h6 class="card-text" style="color: white">
+                  <i
+                    class="bi bi-envelope-at-fill me-2"
+                    style="color: black"
+                  ></i>
+                  abilutfii06@gmail.com
+                </h6>
+                <h6 class="card-text" style="color: white">
+                  <i class="bi bi-instagram me-2" style="color: red"></i>
+                  @ltfndyabi_
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form
+              action="mailto:abilutfii06@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <div class="mb-3 mt-3">
                 <input
                   type="text"
                   class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="name"
+                  id="name"
+                  name="name"
+                  placeholder="Full Name"
                 />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label"> Email</label>
                 <input
                   type="email"
                   class="form-control"
                   id="email"
-                  aria-describedby="email"
+                  name="email"
+                  placeholder="Email"
                 />
               </div>
-
               <div class="mb-3">
-                <label for="pesan" class="form-label"> message</label>
-                <textarea id="pesan" rows="5" class="form-control"></textarea>
+                <textarea
+                  id="pesan"
+                  name="message"
+                  rows="5"
+                  class="form-control"
+                  placeholder="Message"
+                ></textarea>
               </div>
-              <button class="btn btn-primary" type="submit">Send</button>
+              <button class="btn btn-primary" type="submit">
+                Send <i class="bi bi-send"></i>
+              </button>
             </form>
           </div>
         </div>
@@ -339,12 +450,15 @@
     <!-- End Contact -->
     <!-- footer -->
     <footer class="text-black text-center mt-5">
-      <p>
-        Created With <i class="bi bi-heart-fill text-danger"></i> by
-        <a href="" class="text-black fw-bold">Abi Lutfiandy Hendri</a>
+      <p class="footer">
+        Crafted with passion by
+        <i class="bi bi-c-circle" style="font-size: 10px"></i>
+        <a href="">Abi Lutfiandy Hendri</a>
       </p>
     </footer>
+
     <!-- End Footer -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -352,45 +466,18 @@
     ></script>
 
     <!-- scrip Aos -->
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
-
-      // daftar text yang akan berganti pada css typing-effect
-      const texts = [
-        "Frontend Developer",
-        "Backend Developer",
-        "Let's work together and build something great!",
-      ];
-
-      let currentTextIndex = 0;
-
-      // fungsi untuk mengganti teks dengan efek mengetik pada css typing
-
-      function typeText() {
-        const typingElement = document.getElementById("typingText");
-        typingElement.textContent = "";
-
-        const text = texts[currentTextIndex];
-        let i = 0;
-
-        // mengetik efek
-        const interval = setInterval(() => {
-          typingElement.textContent += text.charAt(i);
-          i++;
-          if (i === text.length) {
-            clearInterval(interval);
-            setTimeout(() => {
-              currentTextIndex = (currentTextIndex + 1) % texts.length;
-              typeText();
-            }, 2000);
-          }
-        }, 200);
-      }
-
-      typeText(); //mulai efek mengetik
     </script>
     <!-- End script Aos -->
+
+    <!-- script typeing-efect -->
+    <script src="js/type-text.js"></script>
+    <!-- End Script typing-effect -->
+
+    <!-- scrip zoom porject gambar -->
+    <script src="js/modal-image.js"></script>
+    <!-- end script -->
   </body>
 </html>
