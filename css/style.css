@@ -38,7 +38,7 @@ h6 {
 .btn-custom-button {
   background-color: #ffff00;
   border-color: white;
-  color: white;
+  color: black;
   box-shadow: 0 4px 6px #c7c7c7;
   border-radius: 2em;
 }
@@ -55,7 +55,7 @@ h6 {
 .btn-edit {
   background-color: #1e90ff;
   border-color: #878787;
-  color: white;
+  color: black;
 }
 
 .btn-edit:hover {
@@ -186,7 +186,7 @@ h6 {
     display: flex;
     background-color: #1e90ff;
     border-color: #878787;
-    color: white;
+    color: black;
     justify-content: center;
     flex-direction: none;
     margin-top: 1rem;
@@ -196,7 +196,7 @@ h6 {
     display: flex;
     background-color: #ffff00;
     flex-direction: none;
-    color: white;
+    color: black;
     justify-content: center;
     margin-top: 1rem;
     flex-wrap: wrap;
