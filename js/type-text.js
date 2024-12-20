@@ -2,7 +2,7 @@
 const texts = [
   "Frontend Developer",
   "Backend Developer",
-  "Let's work together and build something great!",
+  "Let’s build success together!",
 ];
 
 let currentTextIndex = 0;

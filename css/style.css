@@ -159,11 +159,12 @@ h6 {
 
 @media screen and (max-width: 768px) {
   .typing-effect {
-    font-size: 14px !important; /* Ukuran font lebih kecil */
+    font-size: 18px !important; /* Ukuran font lebih kecil */
     width: 100%; /* Lebar penuh di layar kecil */
     text-align: center; /* Posisi teks berada di tengah */
     border: none; /* Hilangkan semua border di mobile */
     border-right: none;
+    justify-content: center;
     caret-color: transparent; /* Hilangkan kursor */
     animation: typing 4s steps(40, end) forwards; /* Tanpa blink-caret */
   }
